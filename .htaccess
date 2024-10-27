@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+   RewriteEngine on
+   RewriteRule   ^thumb/([0-9]+)x([0-9]+)/(.*)  timthumb.php?src=http://%{HTTP_HOST}/$3&w=$1&h=$2&zc=1&q=100 [L]
+   RewriteRule    ^$ app/webroot/    [L]
+   RewriteRule    (.*) app/webroot/$1 [L]
+</IfModule>
