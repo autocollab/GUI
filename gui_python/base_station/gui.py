@@ -147,7 +147,6 @@ def show_info():
 def show_sensors():
     distances = bs.sys_info.recv_msg
     try:
-        side_canvas.delete("all")
         side_canvas.create_text(75, 355, text="Distances to obstacles", font=("Arial", 11, "bold"), anchor='w')
 
         part_height = 100 / 5
